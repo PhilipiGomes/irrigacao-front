@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Irrigação</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Sistema de Irrigação</h1>
+  <p>Umidade do solo: <span id="umidade">--</span></p>
+  <p>Status da irrigação: <span id="status">--</span></p>
+  <button onclick="toggle(true)">Ligar</button>
+  <button onclick="toggle(false)">Desligar</button>
+
+  <script>
+    function atualizarStatus() {
+      fetch('/status')
+        .then(r => r.json())
+        .then(d => {
+          document.getElementById("umidade").innerText = d.umidade;
+          document.getElementById("status").innerText = d.agua == 1 ? "Ligada" : "Desligada";
+        })
+        .catch(() => {
+          document.getElementById("status").innerText = "ESP32 offline";
+        });
+    }
+
+    function toggle(acionar) {
+      fetch(acionar ? '/ligar' : '/desligar', { method: 'POST' })
+        .then(() => atualizarStatus());
+    }
+
+    setInterval(atualizarStatus, 2000);
+    atualizarStatus();
+  </script>
+</body>
+</html>
