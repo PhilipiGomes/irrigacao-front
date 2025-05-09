@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Irrigação</title>
+</head>
+<body>
+    <h1>Controle de Irrigação</h1>
+
+    <form method="POST">
+        <button type="submit" name="action" value="Ligar Irrigação">Ligar Irrigação</button>
+        <button type="submit" name="action" value="Desligar Irrigação">Desligar Irrigação</button>
+    </form>
+
+    <hr>
+
+    <h2>Status do Solo:</h2>
+    <p>Umidade atual: <strong>{{ umidade }}</strong></p>
+    <p>Condição do solo: <strong>{{ status }}</strong></p>
+</body>
+</html>
