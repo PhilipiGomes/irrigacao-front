@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Bem‑vindo</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="box">
+    <h2>Bem‑vindo, {{ user }}!</h2>
+    <a href="{{ url_for('dashboard') }}">Ir para o painel de irrigação</a>
+  </div>
+</body>
+</html>

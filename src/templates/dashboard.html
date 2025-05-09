@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel de Irrigação</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='dashboard.js') }}" defer></script>
+</head>
+<body>
+  <h1>Controle de Irrigação</h1>
+  <form id="irrig-form">
+    <button type="button" id="btn-ligar">Ligar Irrigação</button>
+    <button type="button" id="btn-desligar">Desligar Irrigação</button>
+  </form>
+  <hr>
+  <h2>Status do Solo:</h2>
+  <p>Umidade atual: <strong id="umidade">{{ umidade }}</strong></p>
+  <p>Condição do solo: <strong id="status">{{ status }}</strong></p>
+</body>
+</html>

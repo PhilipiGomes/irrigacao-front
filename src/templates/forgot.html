@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Esqueceu sua senha?</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="box">
+    <h2>Esqueceu sua senha?</h2>
+    <p>Insira seu e‑mail para restaurar sua senha.</p>
+    <form method="POST">
+      <input type="email" name="email" placeholder="Email" required>
+      <button type="submit">Enviar</button>
+    </form>
+    <div class="aux-link">
+      <a href="{{ url_for('login') }}">Voltar ao login</a>
+    </div>
+  </div>
+</body>
+</html>
