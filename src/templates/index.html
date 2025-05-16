@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquanox - Controle de Irrigação Inteligente</title>
+    <link rel="stylesheet" href="static/styleinicial.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="static/img/logo.png" alt="Aquanox Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a>HOME</a></li>
+                    <li><a href="#funcoes">FUNÇÕES</a></li>
+                     <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#sobre">SOBRE</a></li>
+                   
+                </ul>
+            </nav>
+            <img src="static/img/usuario.png" alt="Usuário" class="user-icon"> <!-- Adiciona a imagem do usuário -->
+        </div>
+    </header>
+
+    <!-- Banner principal com imagem e texto sobreposto -->
+    <div class="banner-container">
+      <img src="static/img/fundo.png" alt="Banner Aquanox" class="banner-image">
+
+    <div class="rectangle-2"></div>
+      
+      <!-- Left text box -->
+      <div class="text-overlay left">
+         
+          <p>IRRIGAÇÃO COM MONITORAMENTO INTELIGENTE</p>
+        
+          <button class="btn-saiba-mais">Saiba mais</button>
+      </div>
+      
+      <!-- Right login form container -->
+      <div class="login-overlay">
+          <!-- Login Form (visible by default) -->
+          <div class="login-box" id="loginForm">
+              <h2>Login</h2>
+              <form method="POST" action="/welcome"> <!-- Corrigido para usar a rota correta -->
+                  <input type="text" name="username" placeholder="Nome de Usuário" required>
+                  <div class="password-container">
+                      <input type="password" name="password" placeholder="Senha" required>
+                      <button type="button" id="togglePassword" class="toggle-password"></button>
+                  </div>
+                  <div class="aux-link">
+                      <a href="#" id="forgotPasswordLink">Esqueceu sua senha?</a>
+                  </div>
+                  <button type="submit" class="btn-entrar">Entrar</button>
+              </form>
+          </div>
+          
+          <!-- Placeholder para carregar o formulário de recuperação -->
+          <div id="forgotPasswordContainer" style="display: none;"></div>
+      </div>
+      
+        <section id="funcoes">
+            <h2>CONHEÇA NOSSAS FUNÇÕES</h2>
+            <p>Confira as funções disponíveis no Aquanox e como elas funcionam.</p>
+            <div class="funcao-item">
+                <h3>Válvulas</h3>
+                <p>- Estação Meteorológica</p>
+            </div>
+        </section>
+
+        <section id="download">
+            <h2>Baixe o APP!</h2>
+            <div class="download-buttons">
+                <button class="btn-appstore">App Store</button>
+                <button class="btn-playstore">Play Store</button>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>PERGUNTAS FREQUENTES</h2>
+            <ul class="faq-list">
+                <li>Qual a finalidade do projeto?</li>
+                <li>Como funciona o Aquanox?</li>
+                <li>Como funciona o Aquanox?</li>
+                <li>Como funciona o Aquanox?</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
