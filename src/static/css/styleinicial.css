@@ -15,7 +15,6 @@ body {
 }
 
 /* Remove o deslocamento da imagem de fundo */
-
 body::before {
   content: "";
   background-size: cover;
@@ -110,6 +109,13 @@ header {
 @font-face {
   font-family: 'Karantina-Bold';
   src: url('fonts/Karantina-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nexa-Heavy';
+  src: url('fonts/Nexa-Heavy.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
 }
 
 nav ul {
@@ -334,292 +340,7 @@ nav ul li a:hover {
   color: #73A8CE !important;
 }
 
-/* ...existing code... */
-.login-overlay {
-  position: absolute;
-  top: 85%;
-  right: 13%;
-  transform: translateY(-50%);
-}
-
-.login-box {
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7); /* Reduzi a opacidade para 70% */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
-  border: 1px solid rgba(255,255,255,0.2); /* Borda sutil */
-  padding: 2rem;
-  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
-  width: 350px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.login-box h2 {
-  font-size: 48px;
-  font-family: 'Inria Sans Bold Local', Arial, sans-serif; /* Usa apenas a fonte local para o h2 */
-  font-weight: bold;
-  color: white;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  margin-top: 0; /* Remove qualquer margem superior padrão */
-  position: relative;
-  top: -5px; /* Move o título 30px para cima */
-}
-
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  font-size: 1rem;
-}
-
-.login-box .btn-entrar {
-  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradiente para o botão */
-  color: #fff;
-  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
-  font-weight: bold;
-  padding: 15px 20px; /* Aumenta o tamanho do botão */
-  border: none;
-  border-radius: 12px; /* Bordas arredondadas */
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
-  display: block;
-  margin: 0px; /* Centraliza o botão horizontalmente */
-  text-align: center;
-  width: 360px; /* Ajusta a largura do botão */
-  height: 50px;
-}
-
-.login-box .btn-entrar:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
-}
-
-.aux-link {
-  text-align: right;
-  margin: 0.5rem 0 1.5rem;
-}
-
-.aux-link a {
-  color: black;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.aux-link a:hover {
-  text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .text-overlay,
-  .login-overlay {
-      position: static;
-      transform: none;
-      max-width: 100%;
-      width: 100%;
-      margin: 1rem 0;
-  }
-  
-  .banner-container {
-      height: auto;
-      padding: 1rem;
-  }
-}
-
-/* Conteúdo Principal */
-main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-
-/* Seção Login e Recuperação */
-.login-overlay {
-  position: absolute;
-  top: 85%;
-  right: 13%;
-  transform: translateY(-50%);
-}
-
-.login-box {
-  transform: translateY(-50%);
-  background-color: rgba(255, 255, 255, 0.7); /* Reduzi a opacidade para 70% */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
-  border: 1px solid rgba(255,255,255,0.2); /* Borda sutil */
-  padding: 2rem;
-  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
-  width: 350px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.login-box h2 {
-  font-size: 48px;
-  font-family: 'Inria Sans Bold Local', Arial, sans-serif; /* Usa apenas a fonte local para o h2 */
-  font-weight: bold;
-  color: white;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  margin-top: 0; /* Remove qualquer margem superior padrão */
-  position: relative;
-  top: -5px; /* Move o título 30px para cima */
-}
-
-.login-box input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 40px;
-  font-size: 1rem;
-}
-
-.login-box .btn-entrar {
-  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradiente para o botão */
-  color: #fff;
-  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
-  font-weight: bold;
-  padding: 15px 20px; /* Aumenta o tamanho do botão */
-  border: none;
-  border-radius: 12px; /* Bordas arredondadas */
-  cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
-  display: block;
-  margin: 0px; /* Centraliza o botão horizontalmente */
-  text-align: center;
-  width: 360px; /* Ajusta a largura do botão */
-  height: 50px;
-}
-
-.login-box .btn-entrar:hover {
-  transform: scale(1.05); /* Leve aumento ao passar o mouse */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
-}
-
-.aux-link {
-  text-align: right;
-  margin: 0.5rem 0 1.5rem;
-}
-
-.aux-link a {
-  color: black;
-  text-decoration: none;
-  font-size: 0.9rem;
-}
-
-.aux-link a:hover {
-  text-decoration: underline;
-}
-
-/* Responsividade */
-@media (max-width: 900px) {
-  .text-overlay,
-  .login-overlay {
-      position: static;
-      transform: none;
-      max-width: 100%;
-      width: 100%;
-      margin: 1rem 0;
-  }
-  
-  .banner-container {
-      height: auto;
-      padding: 1rem;
-  }
-}
-
-/* Conteúdo Principal */
-main {
-  max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
-}
-
-/* Seção Login e Recuperação */
-#forgotPasswordForm {
-  position: absolute;
-  top: 35%; /* Alterado para 35% para subir mais o formulário */
-  right: 13%; /* Mesma posição horizontal do formulário de login */
-  transform: translateY(20%); /* Posição inicial mais abaixo para a animação */
-  background-color: rgba(255, 255, 255, 0.7); /* Mesma aparência do formulário de login */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 2rem;
-  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
-  width: 350px;
-  display: block; /* Certifique-se de que o formulário está visível */
-  opacity: 0; /* Inicialmente invisível */
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transição mais suave */
-}
-
-#forgotPasswordForm.show {
-  opacity: 1; /* Torna visível ao adicionar a classe */
-  transform: translateY(-100%); /* Posição final mais acima */
-}
-
-#loginForm {
-  background: rgba(217, 217, 217, 0.1);
-  border-radius: 40px;
-  border-style: solid;
-  border-color: #ffffff;
-  border-width: 1.5px;
-  box-shadow: inset -33.43px 33.43px 33.43px 0px rgba(255, 255, 255, 0.1), 
-              inset 33.43px -33.43px 33.43px 0px rgba(165, 165, 165, 0.1), 
-              -4px 8px 20px 0px rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(10.03px);
-  width: 420px;
-  height: 480px;
-  max-width: 90vw;
-  margin: 0 auto;
-  position: relative;
-  top: -68px;
-}
-
-#loginForm.hide {
-  opacity: 0; /* Torna invisível */
-  transform: translateY(-10%); /* Posição inicial para a animação de saída */
-}
-
-#loginForm.show {
-  opacity: 1; /* Torna visível */
-  transform: translateY(-100%); /* Posição final */
-}
-
-#welcomeForm {
-  position: absolute;
-  top: 30%; /* Mesma posição do login */
-  right: 13%; /* Mesma posição horizontal */
-  height: 240px; /* Altura fixa */
-  transform: translateY(-125%);
-  background-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  backdrop-filter: blur(2px);
-  border: 1px solid rgba(255,255,255,0.2);
-  padding: 2rem;
-  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
-  width: 350px;
-  display: block;
-  opacity: 1; /* Visível por padrão */
-  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
-}
-
-/* Efeito de overlay */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 1000;
-  display: none;
-}
-
+/* Estilos do formulário de recuperação de senha (forgot.html) */
 * { box-sizing: border-box; }
 body, html {
   margin: 0; padding: 0;
@@ -631,7 +352,7 @@ body, html {
 .box {
   background: #6e6e6e;
   padding: 30px;
-  border-radius: 10px;
+  border-radius: 16px;
   width: 300px;
   margin: 80px auto;
   text-align: center;
@@ -656,31 +377,391 @@ body, html {
   font-weight: bold;
   text-align: center;
 }
-.box button { background: #5df28a; color: #fff; cursor: pointer; }
-.box a { background: transparent; color: #ccc; font-size: 14px; }
+.box button {
+  background: linear-gradient(90deg, #4caf50, #81c784); /* Gradiente para o botão */
+  color: #fff;
+  font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+  font-weight: bold;
+  padding: 15px 20px; /* Aumenta o tamanho do botão */
+  border: none;
+  border-radius: 12px; /* Bordas arredondadas */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s; /* Transições suaves */
+  display: block;
+  margin: 20px auto; /* Centraliza o botão horizontalmente */
+  text-align: center;
+  width: 80%; /* Ajusta a largura do botão */
+}
+
+.box button:hover {
+  transform: scale(1.05); /* Leve aumento ao passar o mouse */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra ao passar o mouse */
+}
+
+.box a {
+  background: transparent;
+  color: #81c784;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.box a:hover {
+  color: #4caf50; /* Cor mais escura ao passar o mouse */
+}
+
 .aux-link { text-align: right; }
 .aux-link a { font-size: 12px; }
 .flash { list-style: none; padding: 0; margin: 0 0 10px; }
 .flash li { background: #f66; padding: 5px; margin-bottom: 5px; border-radius: 4px; }
 .flash li.success { background: #6f6; }
 
+/* ...existing code... */
+.login-overlay {
+  position: absolute;
+  top: 85%;
+  right: 13%;
+  transform: translateY(-50%);
+}
+
+.aux-link {
+  text-align: right;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.aux-link a {
+  color: black;
+  opacity: 50%;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.aux-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .text-overlay,
+  .login-overlay {
+      position: static;
+      transform: none;
+      max-width: 100%;
+      width: 100%;
+      margin: 1rem 0;
+  }
+  
+  .banner-container {
+      height: auto;
+      padding: 1rem;
+  }
+}
+
+/* Conteúdo Principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+
+/* Seção Login e Recuperação */
+.login-overlay {
+  position: absolute;
+  top: 85%;
+  right: 13%;
+  transform: translateY(-50%);
+}
+
+.login-box {
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  backdrop-filter: blur(2px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2rem;
+  border-radius: 16px;
+  width: 350px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.login-box h2 {
+  font-size: 48px;
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+  top: -5px;
+}
+.login-box h3 {
+  font-size: 15px;
+  font-family: 'Inria Sans Regular Local', Arial, sans-serif;
+  color: black;
+  margin-bottom: 0px;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+  top: -30px;
+  opacity: 50%;
+}
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.login-box .btn-entrar {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  margin: 0px;
+  text-align: center;
+  width: 350px;
+  height: 50px;
+  margin-top: 30px;
+}
+
+.login-box .btn-entrar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.aux-link {
+  text-align: right;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.aux-link a {
+  color: black;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.aux-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .text-overlay,
+  .login-overlay {
+      position: static;
+      transform: none;
+      max-width: 100%;
+      width: 100%;
+      margin: 1rem 0;
+  }
+  
+  .banner-container {
+      height: auto;
+      padding: 1rem;
+  }
+}
+
+/* Conteúdo Principal */
+main {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+/* Estilos para o formulário de recuperação */
+#forgotPasswordForm {
+  position: absolute;
+  top: 35%; /* Alterado para 35% para subir mais o formulário */
+  right: 13%; /* Mesma posição horizontal do formulário de login */
+  transform: translateY(20%); /* Posição inicial mais abaixo para a animação */
+  background-color: rgba(255, 255, 255, 0.7); /* Mesma aparência do formulário de login */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  backdrop-filter: blur(2px); /* Efeito de desfoque sutil */
+  border: 1px solid rgba(255,255,255,0.2); /* Borda sutil */
+  padding: 2rem;
+  border-radius: 16px; /* Aumentado para bordas mais arredondadas */
+  width: 350px;
+  display: block; /* Certifique-se de que o formulário está visível */
+  opacity: 0; /* Inicialmente invisível */
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transição mais suave */
+}  
+
+#forgotPasswordForm.show {
+  opacity: 1; /* Torna visível ao adicionar a classe */
+  transform: translateY(-100%); /* Posição final mais acima */
+}  
+
+#loginForm {
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  box-shadow: inset -33.43px 33.43px 33.43px 0px rgba(255, 255, 255, 0.1), 
+              inset 33.43px -33.43px 33.43px 0px rgba(165, 165, 165, 0.1), 
+              -4px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10.03px);
+  width: 420px;
+  height: 480px;
+  max-width: 90vw;
+  margin: 0 auto;
+  position: relative;
+  top: -68px;
+  right: 13%;
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transição suave */
+}  
+
+#loginForm.hide {
+  opacity: 0; /* Torna invisível */
+  transform: translateY(-10%); /* Posição inicial para a animação de saída */
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out; /* Transição suave */
+}  
+
+#loginForm.show {
+  opacity: 1; /* Torna visível */
+  transform: translateY(-50%); /* Sempre centralizado ao mostrar */
+  transition: opacity 0.6s ease-in, transform 0.6s ease-in; /* Transição suave */
+}  
+
+#loginForm.from-forgot {
+  opacity: 0.7;
+  transform: translateY(30%);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}  
+
+#loginForm.from-forgot.show {
+  opacity: 1;
+  transform: translateY(-50%);
+  transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+}  
+
+
+/* Efeito de overlay */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #5b5b5b;
+  color: #fff;
+}
+
+.box {
+  background: #6e6e6e;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  margin: 80px auto;
+  text-align: center;   
+  box-shadow: 0 0 10px #0003;
+}
+
+.box h2 {
+  margin-bottom: 20px;
+}
+
+.box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+}
+
+.box button, .box a {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  text-decoration: none;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.box button {
+  background: #5df28a;
+  color: #fff;
+  cursor: pointer;
+}
+
+.box a {
+  background: transparent;
+  color: #ccc;
+  font-size: 14px;
+}
+
+.aux-link {
+  text-align: right;
+}
+
+.aux-link a {
+  font-size: 12px;
+}
+
+.flash {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+}
+
+.flash li {
+  background: #f66;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.flash li.success {
+  background: #6f6;
+}
+
 /* Estilos para o botão de alternar visibilidade da senha */
 .password-container {
   position: relative;
-}
-
+} 
+  
 .password-container input {
   width: 100%; /* O campo ocupa toda a largura */
   padding-right: 40px; /* Espaço interno à direita para o botão */
   word-break: break-all; /* Quebra o texto antes de ficar por baixo do botão */
-}
+  border-radius: 10px;
+} 
 
 .password-container .toggle-password {
   position: absolute;
   right: 10px;
   top: 36%;
   transform: translateY(-50%);
-  width: 24px;
+  width: 24px;    
   height: 24px;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -1129,16 +1210,6 @@ body, html {
 }
 
 /* Adições do aaa.css que não estavam em styleinicial.css */
-
-/* Importação local da fonte Nexa Heavy */
-@font-face {
-  font-family: 'Nexa-Heavy';
-  src: url('fonts/Nexa-Heavy.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-/* Seção Funções */
 section {
   margin-bottom: 3rem;
   padding: 2rem;
@@ -1163,7 +1234,6 @@ h2, h3 {
   letter-spacing: 1px;
 }
 
-/* Para os textos das válvulas e meteorologia */
 .funcao-item p {
   font-family: 'Nexa-Heavy', Arial, sans-serif;
   font-weight: bold;
@@ -1171,7 +1241,6 @@ h2, h3 {
   letter-spacing: 0.5px;
 }
 
-/* Seção Download */
 .download-buttons {
   display: flex;
   justify-content: center;
@@ -1206,7 +1275,6 @@ h2, h3 {
   transform: translateY(-3px);
 }
 
-/* Seção FAQ */
 .faq-list {
   list-style-position: inside;
   margin-top: 1.5rem;
@@ -1218,3 +1286,122 @@ h2, h3 {
   font-size: 1.1rem;
 }
 
+/* Garante que o formulário de recuperação tenha prioridade de estilo */
+/* Formatação igual ao login-box para o formulário de recuperação, com transparência e posição mais acima */
+#forgotPasswordForm.login-box,
+.login-box.forgot-password-container,
+div#forgotPasswordForm {
+  background: rgba(217, 217, 217, 0.1);
+  border-radius: 40px;
+  border-style: solid;
+  border-color: #ffffff;
+  border-width: 1.5px;
+  width: 420px;
+  height: 480px;
+  position: relative;
+  box-shadow: inset -33.43px 33.43px 33.43px 0px rgba(255, 255, 255, 0.1),
+    inset 33.43px -33.43px 33.43px 0px rgba(165, 165, 165, 0.1),
+    -4px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10.03px);
+  top: 25%; /* Mais para cima que o login */
+  right: 13%;
+  left: auto;
+  transform: translateY(-20%);
+  display: block;
+  z-index: 100;
+  opacity: 0;
+  transition: opacity 0.6s cubic-bezier(.4,1.5,.5,1), transform 0.6s cubic-bezier(.4,1.5,.5,1);
+}
+
+/* Animação de entrada/saída igual ao login */
+#forgotPasswordForm.show,
+.login-box.forgot-password-container.show,
+div#forgotPasswordForm.show {
+  opacity: 1;
+  transform: translateY(-68%);
+  transition: opacity 0.6s cubic-bezier(.4,1.5,.5,1), transform 0.6s cubic-bezier(.4,1.5,.5,1);
+}
+
+/* Inputs e botão igual ao login */
+#forgotPasswordForm input[type="email"],
+.login-box.forgot-password-container input[type="email"] {
+  width: 350px;
+  padding: 12px;
+  margin-bottom: 0rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+#forgotPasswordForm .btn-enviar,
+.login-box.forgot-password-container .btn-enviar {
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+}
+
+#forgotPasswordForm .btn-enviar:hover,
+.login-box.forgot-password-container .btn-enviar:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#forgotPasswordForm h2,
+.login-box.forgot-password-container h2 {
+  font-size: 48px;
+  font-family: 'Inria Sans Bold Local', Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+  position: relative;
+  top: -5px;
+  line-height: 1.4;
+  width: auto;
+}
+
+#forgotPasswordForm .aux-link,
+.login-box.forgot-password-container .aux-link {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+#forgotPasswordForm .aux-link a,
+.login-box.forgot-password-container .aux-link a {
+  color: black;
+  opacity: 70%;
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 40px;
+}
+
+/* Responsivo igual ao login */
+@media (max-width: 900px) {
+  #forgotPasswordForm.login-box,
+  .login-box.forgot-password-container,
+  div#forgotPasswordForm {
+    position: static;
+    transform: none;
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem 0;
+    right: auto;
+    left: auto;
+    top: auto;
+  }
+}
