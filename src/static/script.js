@@ -46,43 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const loginForm = document.getElementById('loginForm');
   const forgotPasswordContainer = document.getElementById('forgotPasswordContainer');
 
-  // Mostrar informações de boas-vindas no mesmo contêiner
-  const showWelcomeForm = (username) => {
-    loginForm.classList.add('hide'); // Oculta o formulário de login
-    setTimeout(() => {
-      loginForm.style.display = 'none'; // Remove o formulário de login após a animação
-
-      // Cria o conteúdo do formulário de boas-vindas dinamicamente
-      const welcomeHTML = `
-        <div class="login-box" id="welcomeForm">
-          <h2>Bem‑vindo, ${username}!</h2>
-          <a href="/dashboard" class="btn-entrar">Ir para o painel de irrigação</a>
-          <div class="aux-link" style="text-align: center; margin-top: 1rem;">
-          </div>
-        </div>
-      `;
-
-      forgotPasswordContainer.innerHTML = welcomeHTML;
-      forgotPasswordContainer.style.display = 'block';
-      forgotPasswordContainer.classList.add('show'); // Mostra o formulário de boas-vindas
-
-      // Adicionar evento para voltar ao login
-      const backToLogin = document.getElementById('backToLogin');
-      if (backToLogin) {
-        backToLogin.addEventListener('click', function(e) {
-          e.preventDefault();
-          forgotPasswordContainer.classList.remove('show'); // Oculta o formulário de boas-vindas
-          setTimeout(() => {
-            forgotPasswordContainer.style.display = 'none';
-            loginForm.style.display = 'block';
-            loginForm.classList.remove('hide'); // Mostra o formulário de login
-            loginForm.classList.add('show');
-          }, 600); // Tempo ajustado para a transição terminar
-        });
-      }
-    }, 600); // Tempo ajustado para a animação de saída do login
-  };
-
   // Simulação de login (apenas front-end)
   const loginFormElement = document.querySelector('#loginForm form');
   if (loginFormElement) {
@@ -97,8 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
 
-      // Simulação de login bem-sucedido
-      showWelcomeForm(username);
+      // Aqui você pode redirecionar ou exibir mensagem, mas não mostrar welcomeForm
+      // Exemplo:
+      alert('Login realizado com sucesso!');
+      // window.location.href = '/dashboard'; // ou outra ação desejada
     });
   }
 
