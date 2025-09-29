@@ -1,11 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/varsapp.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styleapp.css') }}" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/varsapp.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styleapp.css') }}"
+    />
 
     <style>
       a,
@@ -40,9 +46,17 @@
   </head>
   <body>
     <div class="app">
-      <img class="logo" src="{{ url_for('static', filename='img/logo.png') }}" />
+      <img
+        class="logo"
+        src="{{ url_for('static', filename='img/logo.png') }}"
+        alt="logoAquanox"
+      />
       <div class="frame-3">
-        <img class="codicon-account" src="{{ url_for('static', filename='img/usuario.svg') }}" />
+        <img
+          class="codicon-account"
+          src="{{ url_for('static', filename='img/usuario.svg') }}"
+          alt="usuarioIcon"
+        />
       </div>
       <div class="ol-usu-rio">
         <span>
@@ -53,25 +67,70 @@
       <div class="frame-5">
         <div class="funcoes">Funções</div>
       </div>
-      <div class="valvulas-container" id="valvulasContainer" style="position:relative;">
-        <div class="rectangle-32" style="display:flex; align-items:center; position:relative; cursor:pointer;">
-          <img class="valve-3" src="{{ url_for('static', filename='img/valvula.png') }}" style="margin-right:8px;" />
-          <div class="valvulas" style="flex:1;">Válvulas</div>
-          <img class="vector" id="valvulasToggle" src="{{ url_for('static', filename='img/seta1.svg') }}" />
+      <div
+        class="valvulas-container"
+        id="valvulasContainer"
+        style="position: relative"
+      >
+        <div
+          class="rectangle-32"
+          style="
+            display: flex;
+            align-items: center;
+            position: relative;
+            cursor: pointer;
+          "
+        >
+          <img
+            class="valve-3"
+            src="{{ url_for('static', filename='img/valvula.png') }}"
+            style="margin-right: 8px"
+            alt="valvulaIcon"
+          />
+          <div class="valvulas" style="flex: 1">Válvulas</div>
+          <img
+            class="vector"
+            id="valvulasToggle"
+            src="{{ url_for('static', filename='img/seta1.svg') }}"
+            alt="valvulaSeta"
+          />
         </div>
         <span class="valvulas-exemplo" id="valvulasExemplo">
           <div class="assets" id="valvulasAssets">
             <div class="frame-4" id="addValvulaBox">
-              <div class="adicionar-valvula" id="adicionarValvula" style="cursor:pointer;">Adicionar Válvula</div>
+              <div
+                class="adicionar-valvula"
+                id="adicionarValvula"
+                style="cursor: pointer"
+              >
+                Adicionar Válvula
+              </div>
             </div>
           </div>
         </span>
       </div>
-      <div class="estacao-container" id="estacaoContainer" style="position:relative; margin-top:16px;">
-        <div class="rectangle-32" style="display:flex; align-items:center; position:relative;">
-          <img class="estacao-icon" src="{{ url_for('static', filename='img/climatologia.png') }}" style="margin-right:8px;" />
-          <div class="estacao-label" style="flex:1;">Estação Meteorológica</div>
-          <img class="vector" id="estacaoToggle" src="{{ url_for('static', filename='img/seta2.svg') }}" />
+      <div
+        class="estacao-container"
+        id="estacaoContainer"
+        style="position: relative; margin-top: 16px"
+      >
+        <div
+          class="rectangle-32"
+          style="display: flex; align-items: center; position: relative"
+        >
+          <img
+            class="estacao-icon"
+            src="{{ url_for('static', filename='img/climatologia.png') }}"
+            style="margin-right: 8px"
+            alt="estacaoIcon"
+          />
+          <div class="estacao-label" style="flex: 1">Estação Meteorológica</div>
+          <img
+            class="vector"
+            id="estacaoToggle"
+            src="{{ url_for('static', filename='img/seta2.svg') }}"
+            alt="estacaoSeta"
+          />
         </div>
         <span class="estacao-exemplo" id="estacaoExemplo">
           <div class="weather-main" id="weatherMainBox">
@@ -82,27 +141,45 @@
                 <span class="weather-main-unit">°c</span>
               </div>
               <div class="weather-main-minmax-row">
-                <span class="weather-main-min">min <span id="weatherMin">16</span>°c</span>
-                <span class="weather-main-max">max <span id="weatherMax">27</span>°c</span>
+                <span class="weather-main-min"
+                  >min <span id="weatherMin">16</span>°c</span
+                >
+                <span class="weather-main-max"
+                  >max <span id="weatherMax">27</span>°c</span
+                >
               </div>
               <div class="weather-main-extra-row">
                 <div class="weather-main-extra">
                   <span class="weather-main-extra-label">Umidade</span>
-                  <span class="weather-main-extra-value" id="weatherHumidity">74%</span>
+                  <span class="weather-main-extra-value" id="weatherHumidity"
+                    >74%</span
+                  >
                 </div>
                 <div class="weather-main-extra">
                   <span class="weather-main-extra-label">Vento</span>
-                  <span class="weather-main-extra-value" id="weatherWind">12km/h</span>
+                  <span class="weather-main-extra-value" id="weatherWind"
+                    >12km/h</span
+                  >
                 </div>
                 <div class="weather-main-extra">
                   <span class="weather-main-extra-label">Chuva</span>
-                  <span class="weather-main-extra-value" id="weatherRain">57%</span>
+                  <span class="weather-main-extra-value" id="weatherRain"
+                    >57%</span
+                  >
                 </div>
               </div>
             </div>
           </div>
           <div class="weather-period-select">
-            <label for="weatherPeriod" style="font-family:'Nexa-Heavy',sans-serif;font-size:16px;margin-right:8px;">Intervalo:</label>
+            <label
+              for="weatherPeriod"
+              style="
+                font-family: &quot;Nexa-Heavy&quot;, sans-serif;
+                font-size: 16px;
+                margin-right: 8px;
+              "
+              >Intervalo:</label
+            >
             <select id="weatherPeriod">
               <option value="24h">Últimas 24h</option>
               <option value="semana">Última semana</option>
@@ -110,7 +187,9 @@
             </select>
           </div>
           <div class="weather-tabs" id="weatherTabs">
-            <button class="weather-tab active" data-tab="visao">Visão Geral</button>
+            <button class="weather-tab active" data-tab="visao">
+              Visão Geral
+            </button>
             <button class="weather-tab" data-tab="umidade">Umidade</button>
             <button class="weather-tab" data-tab="vento">Vento</button>
             <button class="weather-tab" data-tab="chuva">Chuva</button>
@@ -121,14 +200,32 @@
           <div class="weather-extra" id="weatherExtra">
             <!-- Conteúdo extra das abas Umidade, Vento, Chuva -->
             <!-- Exemplo: Umidade -->
-            <div class="weather-extra-content" id="weatherExtraUmidade" style="display:none;">
-              <div class="weather-extra-value" id="weatherHumidityBox">Umidade: 53%</div>
+            <div
+              class="weather-extra-content"
+              id="weatherExtraUmidade"
+              style="display: none"
+            >
+              <div class="weather-extra-value" id="weatherHumidityBox">
+                Umidade: 53%
+              </div>
             </div>
-            <div class="weather-extra-content" id="weatherExtraVento" style="display:none;">
-              <div class="weather-extra-value" id="weatherWindBox">Vento: 12 km/h</div>
+            <div
+              class="weather-extra-content"
+              id="weatherExtraVento"
+              style="display: none"
+            >
+              <div class="weather-extra-value" id="weatherWindBox">
+                Vento: 12 km/h
+              </div>
             </div>
-            <div class="weather-extra-content" id="weatherExtraChuva" style="display:none;">
-              <div class="weather-extra-value" id="weatherRainBox">Chuva: 0%</div>
+            <div
+              class="weather-extra-content"
+              id="weatherExtraChuva"
+              style="display: none"
+            >
+              <div class="weather-extra-value" id="weatherRainBox">
+                Chuva: 0%
+              </div>
             </div>
           </div>
         </span>

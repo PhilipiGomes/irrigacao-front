@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width">
     <title>Aquanox - Controle de Irrigação Inteligente</title>
     <link rel="stylesheet" href="static/css/styleinicial.css">
     <script>
@@ -39,13 +39,13 @@
                    
                 </ul>
             </nav>
-            <img src="static/img/usuario.png" alt="Usuário" class="user-icon"> <!-- Adiciona a imagem do usuário -->
+            <img src="static/img/usuario.svg" alt="Usuário" class="user-icon"> <!-- Adiciona a imagem do usuário -->
         </div>
     </header>
 
     <!-- Banner principal com imagem e texto sobreposto -->
     <div class="banner-container">
-      <img src="static/img/fundo.png" alt="Banner Aquanox" class="banner-image">
+      <img src="static/img/fundo.png" alt="Banner Aquanox" class="banner-image" fetchpriority="high">
 
     <div class="rectangle-2"></div>
     <div class="rectangle-7">
@@ -117,7 +117,7 @@
           </div>
         
           <button class="btn-saiba-mais">Saiba mais
-            <img class="maki-arrow" src="static/img/maki-arrow0.svg" />
+            <img class="maki-arrow" src="static/img/maki-arrow0.svg" alt="saibaMaisSeta"/>
           </button>
           
       </div>
@@ -146,8 +146,8 @@
 <!-- Modal de confirmação de cadastro -->
 <div id="cadastroConfirmModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); z-index:9999; align-items:center; justify-content:center;">
   <div style="background:#fff; border-radius:16px; padding:40px 32px; min-width:320px; max-width:90vw; margin:120px auto; box-shadow:0 2px 16px #0003; text-align:center;">
-    <h2 style="font-size:2rem; color:#436177; margin-bottom:16px;">Cadastro realizado com sucesso!</h2>
-    <p style="font-size:1.1rem; color:#222; margin-bottom:32px;">Seu cadastro foi concluído. Clique em "Ir para o painel" para acessar o sistema.</p>
+    <h2 style="font-size:2rem; color:#436177; margin-bottom:16px; font-display: optional;">Cadastro realizado com sucesso!</h2>
+    <p style="font-size:1.1rem; color:#222; margin-bottom:32px; font-display: optional;">Seu cadastro foi concluído. Clique em "Ir para o painel" para acessar o sistema.</p>
     <button id="btnIrPainel" style="background:#73A8CE; color:#fff; font-size:1.1rem; font-family:'Nexa-Heavy',sans-serif; border:none; border-radius:8px; padding:12px 32px; cursor:pointer;">Ir para o painel</button>
   </div>
 </div>

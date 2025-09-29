@@ -1,14 +1,14 @@
 /* Importação local da fonte Karantina Bold */
 @font-face {
-  font-family: 'Karantina-Bold';
-  src: url('/static/fonts/Karantina-Bold.ttf') format('truetype');
+  font-family: "Karantina-Bold";
+  src: url("/static/fonts/Karantina-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
 /* Importação local da fonte Nexa Heavy */
 @font-face {
-  font-family: 'Nexa-Heavy';
-  src: url('/static/fonts/Nexa-Heavy.ttf') format('truetype');
+  font-family: "Nexa-Heavy";
+  src: url("/static/fonts/Nexa-Heavy.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
@@ -21,7 +21,6 @@
   background: #73a8ce;
   height: 2299px;
   position: relative;
-  overflow: hidden;
 }
 .logo {
   width: 150.64px;
@@ -53,7 +52,7 @@
   width: 70px;
   height: 70px;
   position: relative;
-  overflow: visible;
+
   aspect-ratio: 1;
 }
 .ol-usu-rio {
@@ -68,10 +67,12 @@
 }
 .ol-usu-rio-span {
   font-family: "InriaSans-Regular", sans-serif;
+  color: #000000;
 }
 .ol-usu-rio-span2 {
   font-family: "InriaSans-Bold", sans-serif;
   font-weight: 700;
+  color: #000000;
 }
 .frame-5 {
   background: rgba(67, 97, 119, 0.5);
@@ -85,12 +86,11 @@
   position: absolute;
   left: 0px;
   top: 420px;
-  overflow: hidden;
 }
 .funcoes {
   color: #ffffff;
   text-align: left;
-  font-family: 'Karantina-Bold', 'Karantina', cursive, sans-serif;
+  font-family: "Karantina-Bold", "Karantina", cursive, sans-serif;
   font-size: 65px;
   font-weight: 700;
   text-transform: uppercase;
@@ -125,7 +125,7 @@
 .valvulas {
   color: #000000;
   text-align: left;
-  font-family: 'Nexa-Heavy', Arial, sans-serif;
+  font-family: "Nexa-Heavy", Arial, sans-serif;
   font-size: 24px;
   line-height: 85.78%;
   font-weight: bold;
@@ -153,7 +153,7 @@
   position: relative;
   width: 100%;
   max-height: 0;
-  overflow: hidden;
+
   transition: max-height 0.12s;
   border-top: 1px solid #eee;
 }
@@ -182,7 +182,7 @@
 .estacao-label {
   color: #000000;
   text-align: left;
-  font-family: 'Nexa-Heavy', Arial, sans-serif;
+  font-family: "Nexa-Heavy", Arial, sans-serif;
   font-size: 24px;
   line-height: 85.78%;
   font-weight: bold;
@@ -203,14 +203,13 @@
   position: relative;
   width: 100%;
   max-height: 0;
-  overflow: hidden;
+
   transition: max-height 0.12s;
   border-top: 1px solid #eee;
 }
 .estacao-exemplo.show {
   max-height: 700px;
   display: block;
-  overflow: visible;
 }
 
 .assets,
@@ -262,7 +261,7 @@
   height: 90px;
   margin-bottom: 10px;
   order: 3;
-  transition: filter 0.3s, transform 0.3s;
+  transition: transform 0.3s;
   left: auto;
   top: auto;
   aspect-ratio: 1;
@@ -290,23 +289,23 @@
 }
 
 .status {
-  font-family: 'Nexa-Heavy', Arial, sans-serif;
+  font-family: "Nexa-Heavy", Arial, sans-serif;
   font-size: 14px;
   margin-bottom: 8px;
   min-height: 18px;
   order: 2;
 }
 
-.status.ativada{
-  color:#77dd77;
+.status.ativada {
+  color: #77dd77;
 }
 
-.status.desativada{
-  color:#e33629;
+.status.desativada {
+  color: #e33629;
 }
 
 .toggle-btn {
-  font-family: 'Nexa-Heavy', Arial, sans-serif;
+  font-family: "Nexa-Heavy", Arial, sans-serif;
   font-size: 14px;
   padding: 6px 16px;
   border-radius: 8px;
@@ -534,7 +533,9 @@
   justify-content: center;
   margin: 0;
   box-sizing: border-box;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 .adicionar-valvula:hover {
   background: #5fc05f;
@@ -545,7 +546,10 @@
 #editValvulaModal {
   display: none;
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(67, 97, 119, 0.25);
   z-index: 9999;
   align-items: center;
@@ -571,7 +575,7 @@
   align-items: center;
 }
 #editValvulaModal .custom-modal-title {
-  font-family: 'Karantina-Bold', cursive, sans-serif;
+  font-family: "Karantina-Bold", cursive, sans-serif;
   font-size: 32px;
   color: #436177;
   margin-bottom: 16px;
@@ -589,7 +593,9 @@
   border: none;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 #editValvulaModal .custom-modal-btn-yes {
   background: #77dd77;
@@ -604,7 +610,10 @@
 #confirmModal {
   display: none;
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(67, 97, 119, 0.25);
   z-index: 9999;
   align-items: center;
@@ -630,7 +639,7 @@
   align-items: center;
 }
 #confirmModal .custom-modal-title {
-  font-family: 'Karantina-Bold', cursive, sans-serif;
+  font-family: "Karantina-Bold", cursive, sans-serif;
   font-size: 32px;
   color: #436177;
   margin-bottom: 16px;
@@ -655,7 +664,9 @@
   border: none;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 #confirmModal .custom-modal-btn-yes {
   background: #77dd77;
@@ -670,7 +681,10 @@
 #addValvulaModal {
   display: none;
   position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
   background: rgba(67, 97, 119, 0.25);
   z-index: 9999;
   align-items: center;
@@ -696,7 +710,7 @@
   align-items: center;
 }
 #addValvulaModal .custom-modal-title {
-  font-family: 'Karantina-Bold', cursive, sans-serif;
+  font-family: "Karantina-Bold", cursive, sans-serif;
   font-size: 32px;
   color: #436177;
   margin-bottom: 16px;
@@ -714,7 +728,9 @@
   border: none;
   font-weight: 700;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
 }
 #addValvulaModal .custom-modal-btn-yes {
   background: #77dd77;
@@ -864,7 +880,7 @@
 .estacao-label {
   color: #000000;
   text-align: left;
-  font-family: 'Nexa-Heavy', Arial, sans-serif;
+  font-family: "Nexa-Heavy", Arial, sans-serif;
   font-size: 24px;
   line-height: 85.78%;
   font-weight: bold;
@@ -885,14 +901,13 @@
   position: relative;
   width: 100%;
   max-height: 0;
-  overflow: hidden;
+
   transition: max-height 0.12s;
   border-top: 1px solid #eee;
 }
 .estacao-exemplo.show {
   max-height: 700px;
   display: block;
-  overflow: visible;
 }
 
 /* Weather main info */
@@ -915,7 +930,7 @@
   align-items: flex-start;
 }
 .weather-main-title {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #222;
@@ -928,14 +943,14 @@
   margin-bottom: 0;
 }
 .weather-main-temp {
-  font-family: 'Nexa-Heavy', cursive, sans-serif;
+  font-family: "Nexa-Heavy", cursive, sans-serif;
   font-size: 64px;
   font-weight: 700;
   color: #222;
   line-height: 1;
 }
 .weather-main-unit {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 38px;
   color: #222;
   margin-left: 4px;
@@ -951,7 +966,7 @@
 }
 .weather-main-min,
 .weather-main-max {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 18px;
   color: #222;
   font-weight: 700;
@@ -969,13 +984,13 @@
   min-width: 70px;
 }
 .weather-main-extra-label {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 16px;
   color: #222;
   font-weight: 700;
 }
 .weather-main-extra-value {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 18px;
   color: #222;
   font-weight: 400;
@@ -991,7 +1006,7 @@
   margin-top: 0;
 }
 .weather-tab {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 16px;
   color: #222;
   background: #f5f7fa;
@@ -999,7 +1014,9 @@
   padding: 6px 18px;
   border: none;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+  transition:
+    background 0.2s,
+    color 0.2s;
   outline: none;
   font-weight: 700;
 }
@@ -1047,26 +1064,26 @@
   justify-content: flex-start;
 }
 .weather-card-title {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 16px;
   color: #222;
   margin-bottom: 8px;
   font-weight: 700;
 }
 .weather-card-temp {
-  font-family: 'Nexa-Heavy', cursive, sans-serif;
+  font-family: "Nexa-Heavy", cursive, sans-serif;
   font-size: 18.8px;
   color: #222;
   margin-bottom: 2px;
   font-weight: 700;
 }
 .weather-card-desc {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 14px;
   color: #888;
 }
 .weather-card-minmax {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 13px;
   color: #222;
   margin-top: 2px;
@@ -1086,7 +1103,7 @@
   display: block;
 }
 .weather-extra-value {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 20px;
   color: #436177;
   background: #e0e7ef;
@@ -1105,7 +1122,7 @@
   gap: 8px;
 }
 .weather-period-select select {
-  font-family: 'Nexa-Heavy', sans-serif;
+  font-family: "Nexa-Heavy", sans-serif;
   font-size: 16px;
   border-radius: 8px;
   padding: 6px 18px;
